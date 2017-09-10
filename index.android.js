@@ -10,15 +10,18 @@ import {
   StyleSheet,
   Text,
   View,
-  Button
+  Button,
+  TextInput
 } from 'react-native';
 
 export default class appiumTutorial extends Component {
   state = {
-    counter: 0
+    counter: 0,
+    text: '',
   }
 
   onPress = () => this.setState({ counter: this.state.counter + 1 })
+  onChangeText = text => this.setState({ text })
 
   render() {
     return (
@@ -36,6 +39,14 @@ export default class appiumTutorial extends Component {
 
         <Text accessibilityLabel="counter">{this.state.counter}</Text>
         <Button onPress={this.onPress} title="Press me" accessibilityLabel="button" />
+
+        <Text accessibilityLabel="text">{this.state.text}</Text>
+        <TextInput
+          accessibilityLabel="textinput"
+          style={{ width: '100%' }}
+          onChangeText={this.onChangeText}
+          value={this.state.text}
+        />
       </View>
     );
   }
