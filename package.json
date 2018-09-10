@@ -13,11 +13,11 @@
 		"react-native": "0.48.2"
 	},
 	"devDependencies": {
-		"appium": "^1.6.5",
+		"appium": "^1.9.0",
 		"appium-doctor": "^1.4.3",
 		"babel-jest": "21.0.2",
 		"babel-preset-react-native": "3.0.2",
-		"jest": "21.0.2",
+		"jest": "^23.6.0",
 		"react-test-renderer": "16.0.0-alpha.12",
 		"wd": "^1.4.0"
 	},
