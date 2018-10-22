@@ -3,9 +3,15 @@ import wd from 'wd';
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 60000;
 const PORT = 4723;
 const config = {
+  // platformName: 'iOS',
+  // deviceName: 'iPhone X',
+  // platformVersion: '12.0',
+  // app: 'ios/app-debug.zip'
+  
   platformName: 'Android',
+  printPageSourceOnFindFailure: true,
   deviceName: 'Android Emulator',
-  app: './android/app/build/outputs/apk/app-debug.apk' // relative to root of project
+  app: './android/app/build/outputs/apk/app-release-unsigned.apk'
 };
 const driver = wd.promiseChainRemote('localhost', PORT);
 
